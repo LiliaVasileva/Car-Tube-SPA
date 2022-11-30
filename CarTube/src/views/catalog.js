@@ -21,7 +21,7 @@ const catalogTemplate = (cars) => html`
                 <h3>Price: ${car.price} $</h3>
             </div>
             <div class="data-buttons">
-                <a href="#" class="button-carDetails">Details</a>
+                <a href="/catalog/${car._id}" class="button-carDetails">Details</a>
             </div>
         </div>
     </div>      

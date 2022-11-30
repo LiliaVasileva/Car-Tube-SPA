@@ -5,6 +5,8 @@ import { updateNav } from './views/nav.js'
 import { showLogin } from './views/login.js';
 import { showRegister } from './views/register.js';
 import { showCatalog } from './views/catalog.js';
+import { showDetails } from './views/details.js';
+import { showEdit } from './views/edit.js';
 
 
 
@@ -14,8 +16,8 @@ const main = document.getElementById('site-content');
 page(decorateContext);
 page('/', showHome);
 page('/catalog', showCatalog);
-// page('/catalog/:id', showDetails);
-// page('/edit/:id', showEdit);
+page('/catalog/:id', showDetails);
+page('/edit/:id', showEdit);
 // page('/create', showCreate);
 page('/login', showLogin);
 page('/register', showRegister);

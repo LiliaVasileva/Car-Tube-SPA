@@ -6,13 +6,13 @@ export async function getAll(){
 
 
 export async function getById(id){
-    return get('/data/cars' + id);
+    return get('/data/cars/' + id);
 }
 
 
 
 export async function deleteById(id){
-    return del('/data/cars' + id);
+    return del('/data/cars/' + id);
 }
 
 
@@ -21,5 +21,5 @@ export async function createCar(carData){
 }
 
 export async function editCar(id, carData){
-    return put('/data/cars' + id, carData);
+    return put('/data/cars/' + id, carData);
 }
