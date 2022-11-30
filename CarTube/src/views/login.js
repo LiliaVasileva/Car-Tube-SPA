@@ -40,6 +40,6 @@ export function showLogin(ctx){
 
         await login(username, password);
         ctx.updateNav();
-        ctx.page.redirect('/');
+        ctx.page.redirect('/catalog');
     }
 }

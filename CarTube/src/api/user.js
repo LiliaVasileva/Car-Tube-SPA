@@ -11,13 +11,13 @@ export async function login(username, password){
         });
 }
 
-export async function register(email, password){
-    const {_id, email: resultEmail, accessToken} = await post('/users/register', {email, password});
+export async function register(username, password){
+    const {_id, username: resultUsername, accessToken} = await post('/users/register', {username, password});
 
     setUserData(
         {
             _id,
-            email: resultEmail,
+            username: resultUsername,
             accessToken
         }
     );
