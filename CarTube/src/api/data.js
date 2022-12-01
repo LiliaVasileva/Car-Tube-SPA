@@ -4,6 +4,10 @@ export async function getAll(){
     return get('/data/cars?sortBy=_createdOn%20desc');
 }
 
+export async function getUserItems(userId){
+    return get(`/data/cars?where=_ownerId%3D%22${userId}%22&sortBy=_createdOn%20desc`);
+}
+
 
 export async function getById(id){
     return get('/data/cars/' + id);

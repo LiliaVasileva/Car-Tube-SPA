@@ -13,7 +13,7 @@ const navTemplate = (user) => html`
 ${user ? html`
 <div id="profile">
     <a>Welcome ${user.username}</a>
-    <a href="/">My Listings</a>
+    <a href="/items">My Listings</a>
     <a href="/create">Create Listing</a>
     <a @click=${onLogout} href="javascript:void(0)">Logout</a>
 </div>
@@ -33,5 +33,5 @@ export function updateNav() {
 function onLogout() {
     logout();
     updateNav();
-    page.redirect('/')
+    page.redirect('/catalog')
 }
